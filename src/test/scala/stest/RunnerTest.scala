@@ -2,7 +2,7 @@ package stest
 
 import junit.framework._
 import Assert._
-import jxl.{Sheet, Workbook}
+import jxl.{Sheet, Workbook, Cell}
 
 /**
  * 
@@ -17,7 +17,7 @@ class RunnerTest extends TestCase {
 
       def testWorkbookLoad() = {
           println ("hey")
-          val st = getClass getResourceAsStream "TestWorkbook.xls"
+          val st = getClass getResourceAsStream("TestWorkbook.xls")
           assertNotNull(st)
           val w = Workbook.getWorkbook(st)
           assertNotNull(w)  
@@ -26,9 +26,24 @@ class RunnerTest extends TestCase {
           println(x.size)
 
           println("woot")
+          val cells = w.getSheets.map(doSheet)
+          println(cells(0))
+          
           //for (sheet: Sheet <- w.getSheets) println(sheet)
+          println("done")
       }
 
+
+      def doSheet(st: Sheet)  = {
+          var count = 0;
+          val lst = new Array[Array[Cell]](st.getColumns)
+          while (count < st.getColumns) {
+              lst(count) = st.getColumn(count)
+              count = count + 1
+          }
+          //lst(0).map((c: Cell) => println(c.getContents))
+          lst
+      }
 
 
 }
