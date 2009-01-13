@@ -10,10 +10,7 @@ import jxl.{Sheet, Workbook, Cell}
  */
 
 class RunnerTest extends TestCase {
-      def testSomething() = {
-          val r = new Runner             
-          assertEquals(42, r.doTests)
-      }
+
 
       def testWorkbookLoad() = {
           println ("hey")
@@ -21,29 +18,23 @@ class RunnerTest extends TestCase {
           assertNotNull(st)
           val w = Workbook.getWorkbook(st)
           assertNotNull(w)  
-
-          val x = w.getSheets.map(_.toString)
-          println(x.size)
-
-          println("woot")
-          val cells = w.getSheets.map(doSheet)
-          println(cells(0))
-          
-          //for (sheet: Sheet <- w.getSheets) println(sheet)
-          println("done")
+          w.getSheets.map(doSheet)
       }
 
 
       def doSheet(st: Sheet)  = {
-          var count = 0;
-          val lst = new Array[Array[Cell]](st.getColumns)
-          while (count < st.getColumns) {
-              lst(count) = st.getColumn(count)
-              count = count + 1
-          }
-          //lst(0).map((c: Cell) => println(c.getContents))
-          lst
+          val declarationCells = st.getColumn(0).takeWhile((c: Cell) => c.getContents != "WHEN")
+          val dataCells = st getColumn(0) dropWhile(_.getContents != "WHEN") drop(1) takeWhile(_.getContents != "EXPECT")
+          val expectCells = st.getColumn(0).dropWhile(_.getContents != "EXPECT").drop(1)
+
+          println(declarationCells.size)
+          println(dataCells.size)
+          println(expectCells.size)
+          ""
       }
+
+
+
 
 
 }

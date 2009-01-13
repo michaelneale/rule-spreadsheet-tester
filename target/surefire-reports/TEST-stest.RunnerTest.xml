@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" skipped="0" tests="2" time="0.044" failures="0" name="stest.RunnerTest">
+<testsuite errors="0" skipped="0" tests="1" time="0.03" failures="0" name="stest.RunnerTest">
   <properties>
     <property value="Apple Inc." name="java.vendor"/>
     <property value="/Users/michaelneale/.m2/repository" name="localRepository"/>
@@ -42,13 +42,13 @@
     <property value="mixed mode, sharing" name="java.vm.info"/>
     <property value="michaelneale" name="env.LOGNAME"/>
     <property value="10.5.6" name="os.version"/>
-    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_6481"/>
     <property value=":" name="path.separator"/>
     <property value="1.5.0_16-133" name="java.vm.version"/>
     <property value="apple.awt.CPrinterJob" name="java.awt.printerjob"/>
     <property value="xterm-color" name="env.TERM"/>
     <property value="UnicodeLittle" name="sun.io.unicode.encoding"/>
     <property value="apple.awt.CToolkit" name="awt.toolkit"/>
+    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_25014"/>
     <property value="/Users/michaelneale" name="user.home"/>
     <property value="/Users/michaelneale/project/drools-spreadsheet-tester" name="env.OLDPWD"/>
     <property value="Sun Microsystems Inc." name="java.specification.vendor"/>
@@ -66,7 +66,7 @@
     <property value="little" name="sun.cpu.endian"/>
     <property value="unknown" name="sun.os.patch.level"/>
     <property value="/Users/michaelneale" name="env.HOME"/>
-    <property value="/Users/michaelneale/project/drools-spreadsheet-tester/target/test-classes:/Users/michaelneale/project/drools-spreadsheet-tester/target/classes:/Users/michaelneale/.m2/repository/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar:/Users/michaelneale/.m2/repository/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar:/Users/michaelneale/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:" name="surefire.test.class.path"/>
+    <property value="/Users/michaelneale/project/drools-spreadsheet-tester/target/test-classes:/Users/michaelneale/project/drools-spreadsheet-tester/target/classes:/Users/michaelneale/.m2/repository/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar:/Users/michaelneale/.m2/repository/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar:/Users/michaelneale/.m2/repository/org/drools/drools-compiler/5.0.0.SNAPSHOT/drools-compiler-5.0.0.SNAPSHOT.jar:/Users/michaelneale/.m2/repository/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT.jar:/Users/michaelneale/.m2/repository/org/mvel/mvel2/2.0.5/mvel2-2.0.5.jar:/Users/michaelneale/.m2/repository/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT.jar:/Users/michaelneale/.m2/repository/joda-time/joda-time/1.5.2/joda-time-1.5.2.jar:/Users/michaelneale/.m2/repository/org/antlr/antlr-runtime/3.1.1/antlr-runtime-3.1.1.jar:/Users/michaelneale/.m2/repository/org/eclipse/jdt/core/3.4.2.v_883_R34x/core-3.4.2.v_883_R34x.jar:/Users/michaelneale/.m2/repository/janino/janino/2.5.15/janino-2.5.15.jar:/Users/michaelneale/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:" name="surefire.test.class.path"/>
     <property value="/tmp" name="java.io.tmpdir"/>
     <property value="http://bugreport.apple.com/" name="java.vendor.url.bug"/>
     <property value="/tmp/launch-L3CtJF/Listeners" name="env.SSH_AUTH_SOCK"/>
@@ -86,6 +86,5 @@
     <property value="en_AU.US-ASCII" name="env.LC_COLLATE"/>
     <property value="1.5" name="java.specification.version"/>
   </properties>
-  <testcase classname="stest.RunnerTest" time="0.023" name="testWorkbookLoad"/>
-  <testcase classname="stest.RunnerTest" time="0.001" name="testSomething"/>
+  <testcase classname="stest.RunnerTest" time="0.004" name="testSomething"/>
 </testsuite>
