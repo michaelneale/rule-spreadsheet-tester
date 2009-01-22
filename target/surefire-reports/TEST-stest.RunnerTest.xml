@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" skipped="0" tests="1" time="0.03" failures="0" name="stest.RunnerTest">
+<testsuite errors="0" skipped="0" tests="2" time="0.31" failures="0" name="stest.RunnerTest">
   <properties>
     <property value="Apple Inc." name="java.vendor"/>
     <property value="/Users/michaelneale/.m2/repository" name="localRepository"/>
@@ -44,11 +44,11 @@
     <property value="10.5.6" name="os.version"/>
     <property value=":" name="path.separator"/>
     <property value="1.5.0_16-133" name="java.vm.version"/>
+    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_27412"/>
     <property value="apple.awt.CPrinterJob" name="java.awt.printerjob"/>
     <property value="xterm-color" name="env.TERM"/>
     <property value="UnicodeLittle" name="sun.io.unicode.encoding"/>
     <property value="apple.awt.CToolkit" name="awt.toolkit"/>
-    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_25014"/>
     <property value="/Users/michaelneale" name="user.home"/>
     <property value="/Users/michaelneale/project/drools-spreadsheet-tester" name="env.OLDPWD"/>
     <property value="Sun Microsystems Inc." name="java.specification.vendor"/>
@@ -86,5 +86,6 @@
     <property value="en_AU.US-ASCII" name="env.LC_COLLATE"/>
     <property value="1.5" name="java.specification.version"/>
   </properties>
-  <testcase classname="stest.RunnerTest" time="0.004" name="testSomething"/>
+  <testcase classname="stest.RunnerTest" time="0.282" name="testWorkbookLoad"/>
+  <testcase classname="stest.RunnerTest" time="0" name="testSomething"/>
 </testsuite>

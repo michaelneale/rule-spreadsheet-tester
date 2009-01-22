@@ -5,18 +5,19 @@ import Assert._
 import jxl.{Sheet, Workbook, Cell}
 
 /**
- * 
+ * Remember for all test runners to work, must return Unit !
+ * Some of them won't work otherwise (eg surefire !).
  * @author Michael Neale
  */
-
 class RunnerTest extends TestCase {
 
 
-      def testWorkbookLoad() = {
+
+      def testWorkbookLoad() :Unit = {
           println ("hey")
           val st = getClass getResourceAsStream("TestWorkbook.xls")
           assertNotNull(st)
-          val w = Workbook.getWorkbook(st)
+          val w = Workbook.getWorkbook (st)
           assertNotNull(w)  
           w.getSheets.map(doSheet)
       }
@@ -27,9 +28,19 @@ class RunnerTest extends TestCase {
           val dataCells = st getColumn(0) dropWhile(_.getContents != "WHEN") drop(1) takeWhile(_.getContents != "EXPECT")
           val expectCells = st.getColumn(0).dropWhile(_.getContents != "EXPECT").drop(1)
 
-          println(declarationCells.size)
-          println(dataCells.size)
-          println(expectCells.size)
+
+          lazy val dataStartRow = dataCells(0).getRow
+          lazy val expectStartRow = expectCells(0).getRow
+
+          //now lets to column 1
+          val scenarioData = st getColumn(1) dropWhile(_.getRow <  dataStartRow) takeWhile(_.getRow < expectStartRow - 1)
+          val expectationData = st getColumn(1) dropWhile(_.getRow < expectStartRow)
+
+          //do the data
+          println(scenarioData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))
+
+          //do the expectations
+          println(expectationData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))          
           ""
       }
 
