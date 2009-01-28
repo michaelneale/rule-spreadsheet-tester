@@ -2,6 +2,7 @@ package stest
 
 import junit.framework._
 import Assert._
+import org.mvel2.MVEL
 import jxl.{Sheet, Workbook, Cell}
 
 /**
@@ -37,25 +38,29 @@ class RunnerTest extends TestCase {
           val scenarioData = st getColumn(1) dropWhile(_.getRow <  dataStartRow) takeWhile(_.getRow < expectStartRow - 1)
           val expectationData = st getColumn(1) dropWhile(_.getRow < expectStartRow)
 
-          //do the data
-          println("Scenario data: " + scenarioData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))
-          //println(expectationData.map((c: Cell) => c.getContents))
-          //println(expectCells.map((c: Cell) => c.getContents))
 
           val scenario1Input = dataCells.map((c: Cell) => (c.getContents.replace(' ', '.'), scenarioData(c.getRow - dataStartRow).getContents))
           println(scenario1Input)
 
-          //do the expectations
-          //println("Expectation data: " + expectationData.map((c: Cell) => c.getContents + ":" + expectCells(c.getRow - expectStartRow).getContents))
+          val scenario1Expectations = expectCells.map((c: Cell) => ((c.getContents.replace(' ', '.')), expectationData(c.getRow - expectStartRow).getContents)).filter(_._1 != "")
+          println(scenario1Expectations)
           ""
       }
+
+    def testMVEL : Unit = {
+
+        val f = new SampleFact
+        val hm = new java.util.HashMap[String, Any]
+        hm.put("f",  f)
+        assertNotNull(MVEL.eval("f.name='mic'", hm))
+        assertNotNull(MVEL.eval("f.age='42'", hm))
+        assertEquals("mic", f.name)
+        assertEquals(42, f.age)
+        println("done")
+    }
 
 
 
 
 
 }
-
-class Data
-class Expection
-class Scenario(val data: List[Data], val expections: List[Expection])

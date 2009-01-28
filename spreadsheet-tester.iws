@@ -19,21 +19,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala" line="40" class="Class at RunnerTest.scala:40" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -95,7 +80,43 @@
       <file leaf-file-name="RunnerTest.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="36" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.78238344">
+            <state line="56" column="35" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.8031915">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="414" column="13" selection-start="15269" selection-end="15269" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predef.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="176" column="53" selection-start="7037" selection-end="7037" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MVEL.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.5/mvel2-2.0.5.jar!/org/mvel2/MVEL.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="35" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SampleFact.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="28" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -269,22 +290,22 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
   </component>
-  <component name="RunManager" selected="JUnit.RunnerTest">
-    <tempConfiguration default="false" name="RunnerTest" type="JUnit" factoryName="JUnit" enabled="false" merge="false" sample_coverage="true" runner="emma">
+  <component name="RunManager" selected="JUnit.RunnerTest.testMVEL">
+    <tempConfiguration default="false" name="RunnerTest.testMVEL" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
       <pattern>
         <option name="PATTERN" value="stest.*" />
         <option name="ENABLED" value="true" />
       </pattern>
       <module name="spreadsheet-tester" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="stest" />
       <option name="MAIN_CLASS_NAME" value="stest.RunnerTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="METHOD_NAME" value="testMVEL" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="ADDITIONAL_CLASS_PATH" />
@@ -293,7 +314,7 @@
       </option>
       <envs />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="55557" />
+        <option name="DEBUG_PORT" value="56604" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -382,7 +403,7 @@
       <option name="PORT" value="5005" />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RunnerTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RunnerTest.testMVEL" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -544,9 +565,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="28" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.5/mvel2-2.0.5.jar!/org/mvel2/MVEL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="35" selection-start="1563" selection-end="1563" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="53" selection-start="7037" selection-end="7037" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="414" column="13" selection-start="15269" selection-end="15269" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="36" selection-start="1731" selection-end="1731" vertical-scroll-proportion="0.78238344">
+        <state line="56" column="35" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.8031915">
           <folding />
         </state>
       </provider>
