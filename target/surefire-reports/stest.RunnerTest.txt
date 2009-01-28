@@ -1,4 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: stest.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.327 sec
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.305 sec <<< FAILURE!
+testWorkbookLoad(stest.RunnerTest)  Time elapsed: 0.258 sec  <<< ERROR!
+java.lang.IndexOutOfBoundsException
+	at scala.RandomAccessSeq$Slice$class.apply(RandomAccessSeq.scala:63)
+	at scala.Array$Projection$$anon$1.apply(Array.scala:249)
+	at scala.Array$Projection$$anon$1.apply(Array.scala:249)
+	at stest.RunnerTest$$anonfun$doSheet$2.apply(RunnerTest.scala:44)
+	at stest.RunnerTest$$anonfun$doSheet$2.apply(RunnerTest.scala:44)
+	at scala.Seq$Projection$MapProjection.apply(Seq.scala:55)
+	at scala.Seq$Projection$MapProjection.apply(Seq.scala:52)
+	at scala.RandomAccessSeq$$anon$13.next(RandomAccessSeq.scala:166)
+	at scala.Iterable$class.addString(Iterable.scala:460)
+	at scala.Seq$Projection$MapProjection.addString(Seq.scala:52)
+	at scala.Iterable$class.mkString(Iterable.scala:426)
+	at scala.Seq$Projection$MapProjection.mkString(Seq.scala:52)
+	at scala.Collection$class.toString(Collection.scala:34)
+	at scala.Seq$Projection$MapProjection.toString(Seq.scala:52)
+	at java.lang.String.valueOf(String.java:2615)
+	at java.io.PrintStream.print(PrintStream.java:616)
+	at java.io.PrintStream.println(PrintStream.java:753)
+	at scala.Console$.println(Console.scala:162)
+	at scala.Predef$.println(Predef.scala:157)
+	at stest.RunnerTest.doSheet(RunnerTest.scala:44)
+	at stest.RunnerTest.testWorkbookLoad(RunnerTest.scala:23)
+

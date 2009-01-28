@@ -18,8 +18,9 @@ class RunnerTest extends TestCase {
           val st = getClass getResourceAsStream("TestWorkbook.xls")
           assertNotNull(st)
           val w = Workbook.getWorkbook (st)
-          assertNotNull(w)  
-          w.getSheets.map(doSheet)
+          assertNotNull(w)
+
+          doSheet(w.getSheets()(0))
       }
 
 
@@ -32,15 +33,20 @@ class RunnerTest extends TestCase {
           lazy val dataStartRow = dataCells(0).getRow
           lazy val expectStartRow = expectCells(0).getRow
 
-          //now lets to column 1
+          //now lets do column 1
           val scenarioData = st getColumn(1) dropWhile(_.getRow <  dataStartRow) takeWhile(_.getRow < expectStartRow - 1)
           val expectationData = st getColumn(1) dropWhile(_.getRow < expectStartRow)
 
           //do the data
-          println(scenarioData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))
+          println("Scenario data: " + scenarioData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))
+          //println(expectationData.map((c: Cell) => c.getContents))
+          //println(expectCells.map((c: Cell) => c.getContents))
+
+          val scenario1Input = dataCells.map((c: Cell) => (c.getContents.replace(' ', '.'), scenarioData(c.getRow - dataStartRow).getContents))
+          println(scenario1Input)
 
           //do the expectations
-          println(expectationData.map((c: Cell) => c.getContents + ":" + dataCells(c.getRow - dataStartRow).getContents))          
+          //println("Expectation data: " + expectationData.map((c: Cell) => c.getContents + ":" + expectCells(c.getRow - expectStartRow).getContents))
           ""
       }
 
