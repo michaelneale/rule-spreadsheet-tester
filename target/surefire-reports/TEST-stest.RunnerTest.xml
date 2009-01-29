@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" skipped="0" tests="1" time="0.289" failures="0" name="stest.RunnerTest">
+<testsuite errors="0" skipped="0" tests="2" time="0.443" failures="0" name="stest.RunnerTest">
   <properties>
     <property value="Apple Inc." name="java.vendor"/>
     <property value="/Users/michaelneale/.m2/repository" name="localRepository"/>
@@ -10,7 +10,6 @@
     <property value="/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/ui.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/laf.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/sunrsasign.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/jsse.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/jce.jar:/System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Classes/charsets.jar" name="sun.boot.class.path"/>
     <property value="/var/folders/Sy/SyL3N7oiGoCA5A8SqImSp++++TI/-Tmp-/" name="env.TMPDIR"/>
     <property value="/Users/michaelneale/project/drools-spreadsheet-tester" name="env.PWD"/>
-    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_7938"/>
     <property value="en_AU.US-ASCII" name="env.LANG"/>
     <property value="Sun Microsystems Inc." name="java.vm.specification.vendor"/>
     <property value="1.5.0_16-b06-284" name="java.runtime.version"/>
@@ -43,6 +42,7 @@
     <property value="mixed mode, sharing" name="java.vm.info"/>
     <property value="michaelneale" name="env.LOGNAME"/>
     <property value="10.5.6" name="os.version"/>
+    <property value="org.codehaus.classworlds.Launcher" name="env.JAVA_MAIN_CLASS_8521"/>
     <property value=":" name="path.separator"/>
     <property value="1.5.0_16-133" name="java.vm.version"/>
     <property value="apple.awt.CPrinterJob" name="java.awt.printerjob"/>
@@ -86,32 +86,6 @@
     <property value="en_AU.US-ASCII" name="env.LC_COLLATE"/>
     <property value="1.5" name="java.specification.version"/>
   </properties>
-  <testcase classname="stest.RunnerTest" time="0.227" name="testWorkbookLoad">
-    <error type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException
-	at scala.RandomAccessSeq$Slice$class.apply(RandomAccessSeq.scala:63)
-	at scala.Array$Projection$$anon$1.apply(Array.scala:249)
-	at scala.Array$Projection$$anon$1.apply(Array.scala:249)
-	at stest.RunnerTest$$anonfun$doSheet$2.apply(RunnerTest.scala:44)
-	at stest.RunnerTest$$anonfun$doSheet$2.apply(RunnerTest.scala:44)
-	at scala.Seq$Projection$MapProjection.apply(Seq.scala:55)
-	at scala.Seq$Projection$MapProjection.apply(Seq.scala:52)
-	at scala.RandomAccessSeq$$anon$13.next(RandomAccessSeq.scala:166)
-	at scala.Iterable$class.addString(Iterable.scala:460)
-	at scala.Seq$Projection$MapProjection.addString(Seq.scala:52)
-	at scala.Iterable$class.mkString(Iterable.scala:426)
-	at scala.Seq$Projection$MapProjection.mkString(Seq.scala:52)
-	at scala.Collection$class.toString(Collection.scala:34)
-	at scala.Seq$Projection$MapProjection.toString(Seq.scala:52)
-	at java.lang.String.valueOf(String.java:2615)
-	at java.io.PrintStream.print(PrintStream.java:616)
-	at java.io.PrintStream.println(PrintStream.java:753)
-	at scala.Console$.println(Console.scala:162)
-	at scala.Predef$.println(Predef.scala:157)
-	at stest.RunnerTest.doSheet(RunnerTest.scala:44)
-	at stest.RunnerTest.testWorkbookLoad(RunnerTest.scala:23)
-</error>
-    <system-out>hey
-ArrayM(Holden:vehicle type, 120:vehicle speed, 30000:vehicle cost, 32:driver risk, mic:driver name)
-</system-out>
-  </testcase>
+  <testcase classname="stest.RunnerTest" time="0.179" name="testMVEL"/>
+  <testcase classname="stest.RunnerTest" time="0.235" name="testWorkbookLoad"/>
 </testsuite>
