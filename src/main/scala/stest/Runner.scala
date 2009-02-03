@@ -15,8 +15,14 @@ class Runner {
         val expectCells = st.getColumn(0).dropWhile(_.getContents != "EXPECT").drop(1)
 
 
-        val facts = declarationCells.dropWhile(_.getContents.startsWith("Global"))
-        val globals = declarationCells.takeWhile(_.getContents.startsWith("Global"))
+        val facts = declarationCells.filter(_.getContents startsWith("Fact")).map(_.getContents.replace("Fact", "").split(":"))
+        val globals = declarationCells.filter(_.getContents startsWith("Global")).map(_.getContents.replace("Global", "").split(":"))
+        println(facts.size)
+        println(globals.size)
+        println(facts(0)(0))
+        println(facts(0)(1))
+
+
 
         lazy val dataStartRow = dataCells(0).getRow
         lazy val expectStartRow = expectCells(0).getRow
@@ -25,7 +31,7 @@ class Runner {
         val allcols = for (i <- 1 to (st.getColumns - 1)) yield st.getColumn(i)
 
         //ok here are our scenarios
-        val scenarioColumns = allcols.filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
+        val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
 
 
 
