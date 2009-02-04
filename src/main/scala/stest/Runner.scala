@@ -17,10 +17,8 @@ class Runner {
 
         val facts = declarationCells.filter(_.getContents startsWith("Fact")).map(_.getContents.replace("Fact", "").split(":"))
         val globals = declarationCells.filter(_.getContents startsWith("Global")).map(_.getContents.replace("Global", "").split(":"))
-        println(facts.size)
-        println(globals.size)
-        println(facts(0)(0))
-        println(facts(0)(1))
+        println(facts(0)(0))      //name
+        println(facts(0)(1))      //value
 
 
 
@@ -39,15 +37,25 @@ class Runner {
 
 
         for (col <- scenarioColumns) {
+            //load up MVEL with data  (TODO - ugly hashmap)
+
             val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
             val expectationData = col dropWhile (_.getRow < expectStartRow)
+
+            //pump in scenario data
             println(dataCells.map((c: Cell) => (c.getContents.replace(' ', '.'), scenarioData(c.getRow - dataStartRow).getContents)))
+
+            //perform checks
             println(expectCells.map((c: Cell) => ((c.getContents.replace(' ', '.')), expectationData(c.getRow - expectStartRow).getContents)).filter(_._1 != ""))
+
+            //and we return the result - one per scenario
         }
 
 
         ""
 
     }
+
+    
 
 }
