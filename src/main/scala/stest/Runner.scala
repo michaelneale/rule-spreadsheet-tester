@@ -66,6 +66,7 @@ class Runner {
         true
     }
 
+    /** annoyingly putAll is a mutation method in java. NAUGHTY ! */
     def combine[K, Y](lh: JavaHash[K, Y], rh: JavaHash[K, Y]) = {
         val nh = new JavaHash[K, Y]
         nh putAll lh
