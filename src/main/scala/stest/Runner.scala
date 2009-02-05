@@ -28,7 +28,7 @@ class Runner {
         //turn it into a list - thankfully scala is nice and lazy about this
         val allcols = for (i <- 1 to (st.getColumns - 1)) yield st.getColumn(i)
 
-        //ok here are our scenarios
+        //ok here are our scenarios, filtering it down
         val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
 
 
@@ -55,6 +55,8 @@ class Runner {
         ""
 
     }
+
+    
 
     
 
