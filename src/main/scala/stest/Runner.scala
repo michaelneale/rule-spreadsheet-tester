@@ -35,20 +35,24 @@ class Runner {
 
             //pump in scenario data
             val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
-            dataCells.map((c: Cell) => populateData(allData, c.getContents, scenarioData(c.getRow - dataStartRow).getContents))
-            
+
+            for (c <- dataCells) {
+                populateData(allData, c.getContents, scenarioData(c.getRow - dataStartRow).getContents)
+            }
+
+
 
             //here we fire things up in rules  TODO
 
             //perform checks
             val expectationData = col dropWhile (_.getRow < expectStartRow)
-            println(expectCells.map((c: Cell) => ((c.getContents.replace(' ', '.')), expectationData(c.getRow - expectStartRow).getContents)).filter(_._1 != ""))
+            val res = expectCells.map((c: Cell) => inspectResult(allData, c.getContents, expectationData(c.getRow - expectStartRow).getContents))
+            println(res)
 
             //and we return the result - one per scenario
         }
 
-
-        ""
+        
 
     }
 
@@ -63,13 +67,18 @@ class Runner {
 
     /** Use MVEL to populate the data for a field */
     def populateData(dt: JavaHash[String, Object], expression: String, value: String) = {
+        println("here !")
         MVEL.eval(expression.replace(' ', '.') + " = '" + value + "'", dt)
         true
     }
 
     /** Use MVEL to inspect the results */
     def inspectResult(dt: JavaHash[String, Object], expression: String, expected: String)  = {
-        MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt)
+        if (expression == "" || MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
+            "OK"
+        } else {
+            "Failure"
+        }
     }
 
     /** annoyingly putAll is a mutation method in java. NAUGHTY ! */
