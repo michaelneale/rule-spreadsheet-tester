@@ -41,7 +41,7 @@ class RunnerTest extends TestCase {
         assertNotNull(MVEL.eval("f.age='42'", hm))
         assertEquals("mic", f.name)
         assertEquals(42, f.age)
-        println(MVEL.eval("f.age== '42'", hm))        
+        assertTrue(MVEL.eval("f.age== '42'", hm).asInstanceOf[Boolean])
 
         println("done")
 
