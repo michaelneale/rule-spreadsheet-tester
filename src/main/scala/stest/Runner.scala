@@ -61,9 +61,15 @@ class Runner {
         jh
     }
 
+    /** Use MVEL to populate the data for a field */
     def populateData(dt: JavaHash[String, Object], expression: String, value: String) = {
-        MVEL.eval(expression.replace(' ', '.') + " = '" + value + "'")
+        MVEL.eval(expression.replace(' ', '.') + " = '" + value + "'", dt)
         true
+    }
+
+    /** Use MVEL to inspect the results */
+    def inspectResult(dt: JavaHash[String, Object], expression: String, expected: String)  = {
+        MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt)
     }
 
     /** annoyingly putAll is a mutation method in java. NAUGHTY ! */
