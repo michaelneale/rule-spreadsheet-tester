@@ -12,7 +12,7 @@ class SampleFact {
     def getName = name
 
 
-    def setAge(i: Integer) : Unit = { age = i }
+    def setAge(i: Int) : Unit = { age = i }
     def getAge = age
 
 }

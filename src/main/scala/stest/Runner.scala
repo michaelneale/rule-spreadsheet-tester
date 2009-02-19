@@ -11,6 +11,7 @@ import java.util.{HashMap => JavaHash}
 import org.mvel2.MVEL
 
 class Runner {
+
     def processSheet(st: Sheet) = {
         val declarationCells = st.getColumn(0).takeWhile(_.getContents != "WHEN")
         val dataCells = st getColumn (0) dropWhile (_.getContents != "WHEN") drop (1) takeWhile (_.getContents != "EXPECT")
@@ -27,33 +28,37 @@ class Runner {
         //ok here are our scenarios, filtering it down
         val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
 
-        for (col <- scenarioColumns) {
-            //load up MVEL with data
-            val factData = createObjects (facts)
-            val globalData = createObjects (globals) 
-            val allData = combine (factData, globalData)
 
-            //pump in scenario data
-            val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
+        val res = scenarioColumns.map((col: Array[Cell]) => processScenario(col, dataCells, expectCells, facts, globals, dataStartRow, expectStartRow))
 
-            for (c <- dataCells) {
-                populateData(allData, c.getContents, scenarioData(c.getRow - dataStartRow).getContents)
-            }
-
-
-
-            //here we fire things up in rules  TODO
-
-            //perform checks
-            val expectationData = col dropWhile (_.getRow < expectStartRow)
-            val res = expectCells.map((c: Cell) => inspectResult(allData, c.getContents, expectationData(c.getRow - expectStartRow).getContents))
-            println(res)
-
-            //and we return the result - one per scenario
-        }
+        println(res(0).map(println(_)))
+        println(res(1))
 
         
 
+    }
+
+    
+    def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int) : Array[String] = {
+      val factData = createObjects (facts)
+      val globalData = createObjects (globals)
+      val allData = combine (factData, globalData)
+
+      //pump in scenario data
+      val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
+
+      for (c <- dataCells) {
+          populateData(allData, c.getContents, scenarioData(c.getRow - dataStartRow).getContents)
+      }
+
+
+
+      //here we fire things up in rules  TODO
+
+      //perform checks
+      val expectationData = col dropWhile (_.getRow < expectStartRow)
+      expectCells.map((c: Cell) => inspectResult(allData, c, expectationData(c.getRow - expectStartRow).getContents))
+      
     }
 
 
@@ -67,13 +72,13 @@ class Runner {
 
     /** Use MVEL to populate the data for a field */
     def populateData(dt: JavaHash[String, Object], expression: String, value: String) = {
-        println("here !")
         MVEL.eval(expression.replace(' ', '.') + " = '" + value + "'", dt)
         true
     }
 
-    /** Use MVEL to inspect the results */
-    def inspectResult(dt: JavaHash[String, Object], expression: String, expected: String)  = {
+    /** Use MVEL to inspect the results - return a string report */
+    def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
+        val expression = cell.getContents
         if (expression == "" || MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
             "OK"
         } else {
