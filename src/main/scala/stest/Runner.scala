@@ -31,8 +31,8 @@ class Runner {
 
         val res = scenarioColumns.map((col: Array[Cell]) => processScenario(col, dataCells, expectCells, facts, globals, dataStartRow, expectStartRow))
 
-        println(res(0).map(println(_)))
-        println(res(1))
+        res(0).map(println(_))
+        res(1).map(println(_))
 
         
 
@@ -42,22 +42,18 @@ class Runner {
     def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int) : Array[String] = {
       val factData = createObjects (facts)
       val globalData = createObjects (globals)
-      val allData = combine (factData, globalData)
+
 
       //pump in scenario data
       val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
-
-      for (c <- dataCells) {
-          populateData(allData, c.getContents, scenarioData(c.getRow - dataStartRow).getContents)
-      }
-
+      val factStore = populateData(dataCells, combine (factData, globalData), scenarioData, dataStartRow)
 
 
       //here we fire things up in rules  TODO
 
       //perform checks
       val expectationData = col dropWhile (_.getRow < expectStartRow)
-      expectCells.map((c: Cell) => inspectResult(allData, c, expectationData(c.getRow - expectStartRow).getContents))
+      expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
       
     }
 
@@ -71,9 +67,11 @@ class Runner {
     }
 
     /** Use MVEL to populate the data for a field */
-    def populateData(dt: JavaHash[String, Object], expression: String, value: String) = {
-        MVEL.eval(expression.replace(' ', '.') + " = '" + value + "'", dt)
-        true
+    def populateData(dataCells: Array[Cell], dt: JavaHash[String, Object], scenarioData: Array[Cell], dataStartRow: Int) = {
+      for (c <- dataCells) {
+        MVEL.eval(c.getContents.replace(' ', '.') + " = '" + scenarioData(c.getRow - dataStartRow).getContents + "'", dt)
+      }
+      dt
     }
 
     /** Use MVEL to inspect the results - return a string report */
