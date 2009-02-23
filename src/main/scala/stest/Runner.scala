@@ -12,6 +12,9 @@ import org.mvel2.MVEL
 
 class Runner {
 
+   /**
+    * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
+    */
     def processSheet(st: Sheet) = {
         val declarationCells = st.getColumn(0).takeWhile(_.getContents != "WHEN")
         val dataCells = st getColumn (0) dropWhile (_.getContents != "WHEN") drop (1) takeWhile (_.getContents != "EXPECT")
@@ -49,7 +52,7 @@ class Runner {
       val expectationData = col dropWhile (_.getRow < expectStartRow)
       val results = expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
       val failures = results.filter(_.pass == false).map(_.failureDescription)
-      new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.size)
+      new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
 
     }
 
@@ -73,10 +76,12 @@ class Runner {
     /** Use MVEL to inspect the results - return a string report */
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
         val expression = cell.getContents
-        if (expression == "" || MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
-            new PassFail(true, "OK")
+        if (expression == "") {
+           new PassFail(true, "NA")
+        } else if (MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
+           new PassFail(true, "OK")
         } else {
-            new PassFail(false, "Row : " + cell.getRow)
+           new PassFail(false, "Row : " + (cell.getRow + 1) + " expected [" + expected + "]")
         }
     }
 

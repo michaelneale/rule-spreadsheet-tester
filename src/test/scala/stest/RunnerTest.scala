@@ -27,8 +27,17 @@ class RunnerTest extends TestCase {
 
           val rep1 = reports(0)
           println(rep1.name)
+          assertEquals(0, rep1.failures.size)
+          assertEquals("This is a scenario", rep1.name)
+          assertEquals(4, rep1.totalTests)
           println("Failures : " + rep1.failures.size)
           println("Total Tests : " + rep1.totalTests)
+
+        val rep2 = reports(1)
+        println(rep2.name)
+        assertEquals(2, rep2.failures.size)
+        println(rep2.failures(0))
+
 
           
       }
