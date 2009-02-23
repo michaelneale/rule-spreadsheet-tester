@@ -17,14 +17,18 @@ class RunnerTest extends TestCase {
 
 
       def testWorkbookLoad() :Unit = {
-          println ("hey")
           val st = getClass getResourceAsStream("TestWorkbook.xls")
           assertNotNull(st)
           val w = Workbook.getWorkbook (st)
           assertNotNull(w)
 
           val rt = new Runner
-          rt.processSheet(w.getSheets()(0))
+          val reports = rt.processSheet(w.getSheets()(0))
+
+          val rep1 = reports(0)
+          println(rep1.name)
+          println("Failures : " + rep1.failures.size)
+          println("Total Tests : " + rep1.totalTests)
 
           
       }

@@ -28,18 +28,12 @@ class Runner {
         //ok here are our scenarios, filtering it down
         val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
 
-
-        val res = scenarioColumns.map((col: Array[Cell]) => processScenario(col, dataCells, expectCells, facts, globals, dataStartRow, expectStartRow))
-
-        res(0).map(println(_))
-        res(1).map(println(_))
-
-        
-
+       //now run the tests
+       scenarioColumns.map((col: Array[Cell]) => processScenario(col, dataCells, expectCells, facts, globals, dataStartRow, expectStartRow))
     }
 
     
-    def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int) : Array[String] = {
+    def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int)  = {
       val factData = createObjects (facts)
       val globalData = createObjects (globals)
 
@@ -53,8 +47,10 @@ class Runner {
 
       //perform checks
       val expectationData = col dropWhile (_.getRow < expectStartRow)
-      expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
-      
+      val results = expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
+      val failures = results.filter(_.pass == false).map(_.failureDescription)
+      new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.size)
+
     }
 
 
@@ -78,9 +74,9 @@ class Runner {
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
         val expression = cell.getContents
         if (expression == "" || MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
-            "OK"
+            new PassFail(true, "OK")
         } else {
-            "Failure"
+            new PassFail(false, "Row : " + cell.getRow)
         }
     }
 
@@ -97,4 +93,7 @@ class Runner {
 
 }
 
+case class PassFail(pass: Boolean, failureDescription: String)
+
+case class ScenarioReport(name: String, failures: Array[String], totalTests: Int)
 
