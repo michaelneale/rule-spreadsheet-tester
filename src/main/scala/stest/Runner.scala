@@ -29,10 +29,16 @@ class Runner {
         val allcols = for (i <- 1 to (st.getColumns - 1)) yield st.getColumn(i)
 
         //ok here are our scenarios, filtering it down
-        val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "");
+        val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "")
 
        //now run the tests
-       scenarioColumns.map((col: Array[Cell]) => processScenario(col, dataCells, expectCells, facts, globals, dataStartRow, expectStartRow))
+       scenarioColumns.map((col: Array[Cell]) => processScenario( col,
+                                                                  dataCells,
+                                                                  expectCells,
+                                                                  facts,
+                                                                  globals,
+                                                                  dataStartRow,
+                                                                  expectStartRow) )
     }
 
     
@@ -81,7 +87,7 @@ class Runner {
         } else if (MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
            new PassFail(true, "OK")
         } else {
-           new PassFail(false, "Row : " + (cell.getRow + 1) + " expected [" + expected + "]")
+           new PassFail(false, "Failure in row: " + (cell.getRow + 1) + ". Expected [" + expected + "] but was [" + MVEL.eval(expression.replace(' ', '.'), dt) + "]")
         }
     }
 
@@ -93,12 +99,13 @@ class Runner {
         nh
     }
 
+    case class PassFail(pass: Boolean, failureDescription: String)
 
 
 
 }
 
-case class PassFail(pass: Boolean, failureDescription: String)
+
 
 case class ScenarioReport(name: String, failures: Array[String], totalTests: Int)
 
