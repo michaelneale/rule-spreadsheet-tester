@@ -2,10 +2,13 @@ package stest
 
 import junit.framework._
 import Assert._
+import org.drools.io.ResourceFactory
+import org.drools.{KnowledgeBaseFactory, KnowledgeBase}
 import org.mvel2.MVEL
 import java.util.{HashMap => JavaHash}
 import jxl.{Sheet, Workbook, Cell}
 import scala.xml.XML
+import org.drools.builder._
 
 /**
  * Remember for all test runners to work, must return Unit !
@@ -17,29 +20,41 @@ class RunnerTest extends TestCase {
 
 
       def testWorkbookLoad() :Unit = {
-          val st = getClass getResourceAsStream("TestWorkbook.xls")
-          assertNotNull(st)
-          val w = Workbook.getWorkbook (st)
-          assertNotNull(w)
+        val st = getClass getResourceAsStream("TestWorkbook.xls")
+        assertNotNull(st)
+        val w = Workbook.getWorkbook (st)
+        assertNotNull(w)
 
-          val rt = new Runner
-          val reports = rt.processSheet(w.getSheets()(0))
+        val rt = new Runner
+        val reports = rt.processSheet(w.getSheets()(0))
 
-          val rep1 = reports(0)
-          println(rep1.name)
-          assertEquals(0, rep1.failures.size)
-          assertEquals("This is a scenario", rep1.name)
-          assertEquals(4, rep1.totalTests)
-          println("Failures : " + rep1.failures.size)
-          println("Total Tests : " + rep1.totalTests)
+        val rep1 = reports(0)
+        println(rep1.name)
+        assertEquals(0, rep1.failures.size)
+        assertEquals("This is a scenario", rep1.name)
+        assertEquals(4, rep1.totalTests)
+        println("Failures : " + rep1.failures.size)
+        println("Total Tests : " + rep1.totalTests)
 
         val rep2 = reports(1)
         println(rep2.name)
         assertEquals(2, rep2.failures.size)
         println(rep2.failures(0))
+      }
 
 
-          
+      def testWithRules()  = {
+        val kb = KnowledgeBuilderFactory.newKnowledgeBuilder
+        kb.add(ResourceFactory.newInputStreamResource(getClass getResourceAsStream("myrules.drl")), ResourceType.DRL)
+        val pkgs = kb.getKnowledgePackages
+        assertFalse(pkgs.isEmpty)
+        val kbase = KnowledgeBaseFactory.newKnowledgeBase
+        kbase.addKnowledgePackages(pkgs)
+        assertNotNull(kbase)
+
+        kbase.newStatelessKnowledgeSession.executeObject(new SampleFact)
+
+        println("hey")
       }
 
 

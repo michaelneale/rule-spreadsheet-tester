@@ -46,11 +46,9 @@ class Runner {
       val factData = createObjects (facts)
       val globalData = createObjects (globals)
 
-
       //pump in scenario data
       val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
       val factStore = populateData(dataCells, combine (factData, globalData), scenarioData, dataStartRow)
-
 
       //here we fire things up in rules  TODO
 
