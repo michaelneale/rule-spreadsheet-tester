@@ -1,7 +1,0 @@
-package whee
-
-rule "some rule"
-   when
-   then
-    System.out.println(42);
-end
