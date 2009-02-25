@@ -62,7 +62,43 @@
       <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.7098214">
+            <state line="50" column="63" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.33482143">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predef.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="179" column="58" selection-start="7137" selection-end="7137" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractMap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/AbstractMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="344" column="24" selection-start="12746" selection-end="12746" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashMap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="900" column="34" selection-start="30325" selection-end="30325" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Map.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="332" column="14" selection-start="16207" selection-end="16207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,24 +117,6 @@
         <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Arrays.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="13" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collections.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="13" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashSet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="16" selection-start="3168" selection-end="3168" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,24 +144,6 @@
         <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatelessKnowledgeSession.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="107" column="9" selection-start="5220" selection-end="5220" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="947" column="18" selection-start="32156" selection-end="32156" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -537,27 +537,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/KnowledgeBaseFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="32" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="7" selection-start="2770" selection-end="2773" vertical-scroll-proportion="-2.8846154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="17" selection-start="4130" selection-end="4130" vertical-scroll-proportion="0.0">
@@ -582,13 +561,6 @@
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="947" column="18" selection-start="32156" selection-end="32156" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -642,9 +614,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="332" column="14" selection-start="16207" selection-end="16207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="900" column="34" selection-start="30325" selection-end="30325" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/AbstractMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="344" column="24" selection-start="12746" selection-end="12746" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="58" selection-start="7137" selection-end="7137" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.7098214">
+        <state line="50" column="63" selection-start="2108" selection-end="2108" vertical-scroll-proportion="0.33482143">
           <folding />
         </state>
       </provider>

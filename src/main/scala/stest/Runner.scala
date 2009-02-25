@@ -15,6 +15,9 @@ import org.mvel2.MVEL
 
 class Runner(val knowledgeBase: KnowledgeBase) {
 
+
+
+
    /**
     * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
     */
@@ -44,6 +47,12 @@ class Runner(val knowledgeBase: KnowledgeBase) {
                                                                   expectStartRow) )
     }
 
+
+    /** needed to deal with java hashes that we use later on */
+    implicit def toArr[T](set: java.util.Set[T]) = {
+      set.toArray(new Array[T](set.size))
+    }
+
     
     def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int)  = {
       val factData = createObjects (facts)
@@ -65,8 +74,8 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
     def createSession(globalData: JavaHash[String, Object], kb: KnowledgeBase) = {
         val session = kb.newStatelessKnowledgeSession
-        //ugh ! crazy !
-        globalData.keySet.toArray(new Array[String](globalData.size)).map((key: String) => session.setGlobal(key, globalData.get(key)))
+        //ugh ! crazy ! this is what I have to do to live with java hashmaps
+        globalData.keySet.map((key: String) => session.setGlobal(key, globalData.get(key)))
         session
     }
 
@@ -112,6 +121,9 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
 
 }
+
+
+
 
 
 
