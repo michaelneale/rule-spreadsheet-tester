@@ -17,9 +17,26 @@ import org.drools.builder._
  */
 class RunnerTest extends TestCase {
 
+     def testWholeWorkbook = {
 
 
-      def testWorkbookLoad() :Unit = {
+        val kb = KnowledgeBuilderFactory.newKnowledgeBuilder
+        kb.add(ResourceFactory.newInputStreamResource(getClass getResourceAsStream("myrules.drl")), ResourceType.DRL)
+        assertFalse(kb.hasErrors)
+        val kbase = KnowledgeBaseFactory.newKnowledgeBase
+        kbase.addKnowledgePackages(kb.getKnowledgePackages)
+
+        val rt = new Runner(kbase)
+        val result = rt.runTestsInWorkbook(getClass getResourceAsStream("TestWorkbook.xls"))
+        assertEquals(3, result.size)
+
+        assertNotNull(result(0).sheetName)
+        assertNotNull(result(0).scenarioReports)
+        assertTrue(result(0).scenarioReports.length > 0)
+
+      }
+
+      def testWorkbookLoad = {
         val st = getClass getResourceAsStream("TestWorkbook.xls")
         assertNotNull(st)
         val w = Workbook.getWorkbook (st)
@@ -43,7 +60,7 @@ class RunnerTest extends TestCase {
       }
 
 
-      def testRulesLoading()  = {
+      def testRulesLoading  = {
         val kb = KnowledgeBuilderFactory.newKnowledgeBuilder
         kb.add(ResourceFactory.newInputStreamResource(getClass getResourceAsStream("myrules.drl")), ResourceType.DRL)
         val pkgs = kb.getKnowledgePackages
@@ -74,10 +91,14 @@ class RunnerTest extends TestCase {
         assertNotNull(reports(0).name)
         assertNotNull(reports(1).name)
 
+        assertEquals(0, rt.processSheet(w.getSheets()(1)).length)
+
         
 
 
       }
+
+
 
 
     

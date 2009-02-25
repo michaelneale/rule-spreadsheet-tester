@@ -15,7 +15,10 @@ import org.mvel2.MVEL
 
 class Runner(val knowledgeBase: KnowledgeBase) {
 
-
+    def runTestsInWorkbook(input: InputStream) : Array[WorksheetReport] = {
+      val w = Workbook.getWorkbook (input)
+      w.getSheets.map ((s: Sheet) => WorksheetReport(s.getName, processSheet(s)))
+    }
 
 
    /**
@@ -67,7 +70,7 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       val expectationData = col dropWhile (_.getRow < expectStartRow)
       val results = expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
       val failures = results.filter(_.pass == false).map(_.failureDescription)
-      new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
+      ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
     }
 
     /** needed to deal with java hashes that we use later on */
@@ -126,7 +129,6 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
 
 
-
-
 case class ScenarioReport(name: String, failures: Array[String], totalTests: Int)
 
+case class WorksheetReport(sheetName: String, scenarioReports: Array[ScenarioReport])
