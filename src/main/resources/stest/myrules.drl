@@ -1,0 +1,10 @@
+package whee
+
+import stest.SampleFact
+
+rule "some rule"
+   when
+    SampleFact()
+   then
+    System.out.println("rule fired !");
+end

@@ -71,10 +71,10 @@ class RunnerTest extends TestCase {
         val rt = new Runner(kbase)
         val reports = rt.processSheet(w.getSheets()(0))
 
-        //assertNotNull(reports(0).name)
-        //assertNotNull(reports(1).name)
+        assertNotNull(reports(0).name)
+        assertNotNull(reports(1).name)
 
-        println(reports.getClass.getName)
+        
 
 
       }
