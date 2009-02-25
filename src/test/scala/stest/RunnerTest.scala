@@ -43,7 +43,7 @@ class RunnerTest extends TestCase {
       }
 
 
-      def testWithRules()  = {
+      def testRulesLoading()  = {
         val kb = KnowledgeBuilderFactory.newKnowledgeBuilder
         kb.add(ResourceFactory.newInputStreamResource(getClass getResourceAsStream("myrules.drl")), ResourceType.DRL)
         val pkgs = kb.getKnowledgePackages
@@ -57,6 +57,26 @@ class RunnerTest extends TestCase {
         println("OK")
 
         println("hey")
+      }
+
+      def testWithRules = {
+        val w = Workbook.getWorkbook (getClass getResourceAsStream("TestWorkbook.xls"))
+
+        val kb = KnowledgeBuilderFactory.newKnowledgeBuilder
+        kb.add(ResourceFactory.newInputStreamResource(getClass getResourceAsStream("myrules.drl")), ResourceType.DRL)
+        assertFalse(kb.hasErrors)
+        val kbase = KnowledgeBaseFactory.newKnowledgeBase
+        kbase.addKnowledgePackages(kb.getKnowledgePackages)
+
+        val rt = new Runner(kbase)
+        val reports = rt.processSheet(w.getSheets()(0))
+
+        //assertNotNull(reports(0).name)
+        //assertNotNull(reports(1).name)
+
+        println(reports.getClass.getName)
+
+
       }
 
 

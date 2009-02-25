@@ -38,20 +38,18 @@ class Runner(val knowledgeBase: KnowledgeBase) {
         val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "")
 
         //now run the tests
-        scenarioColumns.map((col: Array[Cell]) => processScenario( col,
+        val list = scenarioColumns.map((col: Array[Cell]) => processScenario( col,
                                                                   dataCells,
                                                                   expectCells,
                                                                   facts,
                                                                   globals,
                                                                   dataStartRow,
                                                                   expectStartRow) )
+        list.toArray
     }
 
 
-    /** needed to deal with java hashes that we use later on */
-    implicit def toArr[T](set: java.util.Set[T]) = {
-      set.toArray(new Array[T](set.size))
-    }
+
 
     
     def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int)  = {
@@ -72,6 +70,11 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
     }
 
+    /** needed to deal with java hashes that we use later on */
+    implicit def toArr[T](set: java.util.Set[T]) = {
+      set.toArray(new Array[T](set.size))
+    }
+
     def createSession(globalData: JavaHash[String, Object], kb: KnowledgeBase) = {
         val session = kb.newStatelessKnowledgeSession
         //ugh ! crazy ! this is what I have to do to live with java hashmaps
@@ -90,9 +93,7 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
     /** Use MVEL to populate the data for a field */
     def populateData(dataCells: Array[Cell], dt: JavaHash[String, Object], scenarioData: Array[Cell], dataStartRow: Int) = {
-      for (c <- dataCells) {
-        MVEL.eval(c.getContents.replace(' ', '.') + " = '" + scenarioData(c.getRow - dataStartRow).getContents + "'", dt)
-      }
+      for (c <- dataCells)  MVEL.eval(c.getContents.replace(' ', '.') + " = '" + scenarioData(c.getRow - dataStartRow).getContents + "'", dt)
       dt
     }
 
