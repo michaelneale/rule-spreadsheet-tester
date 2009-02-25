@@ -130,7 +130,7 @@ class RunnerTest extends TestCase {
                    <name>John Doe</name>
                    <email>johndoe@example.com</email>
                  </author>
-                        { entryItems  }
+                        { List(1, 3, 4, 5).map(i => entryItems(i))  }
                  <id>urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6</id>
                 </feed>
 
@@ -139,13 +139,13 @@ class RunnerTest extends TestCase {
 
     }
 
-    def entryItems = {
+    def entryItems(i: Int) : xml.Elem = {
             <entry>
               <title>Atom-Powered Robots Run Amok</title>
               <link href="http://example.org/2003/12/13/atom03"/>
               <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
               <updated>2003-12-13T18:30:02Z</updated>
-              <summary>Some text.</summary>
+              <summary>{ i }</summary>
             </entry>
 
         
