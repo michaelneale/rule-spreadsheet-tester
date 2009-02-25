@@ -25,7 +25,7 @@ class RunnerTest extends TestCase {
         val w = Workbook.getWorkbook (st)
         assertNotNull(w)
 
-        val rt = new Runner
+        val rt = new Runner(KnowledgeBaseFactory.newKnowledgeBase)
         val reports = rt.processSheet(w.getSheets()(0))
 
         val rep1 = reports(0)
@@ -52,7 +52,9 @@ class RunnerTest extends TestCase {
         kbase.addKnowledgePackages(pkgs)
         assertNotNull(kbase)
 
-        kbase.newStatelessKnowledgeSession.executeObject(new SampleFact)
+        val session = kbase.newStatelessKnowledgeSession
+        assertNotNull (session)
+        println("OK")
 
         println("hey")
       }

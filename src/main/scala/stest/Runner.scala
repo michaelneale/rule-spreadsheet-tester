@@ -8,9 +8,12 @@ package stest
 import java.io.InputStream
 import jxl.{Sheet, Workbook, Cell}
 import java.util.{HashMap => JavaHash}
+import org.drools.KnowledgeBase
 import org.mvel2.MVEL
 
-class Runner {
+
+
+class Runner(val knowledgeBase: KnowledgeBase) {
 
    /**
     * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
@@ -31,8 +34,8 @@ class Runner {
         //ok here are our scenarios, filtering it down
         val scenarioColumns = allcols filter((cs: Array[Cell]) => cs(dataStartRow - 1).getContents != "")
 
-       //now run the tests
-       scenarioColumns.map((col: Array[Cell]) => processScenario( col,
+        //now run the tests
+        scenarioColumns.map((col: Array[Cell]) => processScenario( col,
                                                                   dataCells,
                                                                   expectCells,
                                                                   facts,
@@ -50,14 +53,21 @@ class Runner {
       val scenarioData = col dropWhile (_.getRow < dataStartRow) takeWhile (_.getRow < expectStartRow - 1)
       val factStore = populateData(dataCells, combine (factData, globalData), scenarioData, dataStartRow)
 
-      //here we fire things up in rules  TODO
+      //here we fire things up in rules
+      createSession(globalData, knowledgeBase).executeIterable(factData.values)
 
       //perform checks
       val expectationData = col dropWhile (_.getRow < expectStartRow)
       val results = expectCells.map((c: Cell) => inspectResult(factStore, c, expectationData(c.getRow - expectStartRow).getContents))
       val failures = results.filter(_.pass == false).map(_.failureDescription)
       new ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
+    }
 
+    def createSession(globalData: JavaHash[String, Object], kb: KnowledgeBase) = {
+        val session = kb.newStatelessKnowledgeSession
+        //ugh ! crazy !
+        globalData.keySet.toArray(new Array[String](globalData.size)).map((key: String) => session.setGlobal(key, globalData.get(key)))
+        session
     }
 
 
@@ -77,7 +87,7 @@ class Runner {
       dt
     }
 
-    /** Use MVEL to inspect the results - return a string report */
+    /** Use MVEL to inspect the results */
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
         val expression = cell.getContents
         if (expression == "") {

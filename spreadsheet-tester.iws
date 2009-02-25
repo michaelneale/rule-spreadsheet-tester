@@ -59,28 +59,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RunnerTest.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="0" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.7098214">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunnerTest.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="71" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.40756914">
+            <state line="27" column="26" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnowledgeBuilderFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/builder/KnowledgeBuilderFactory.java">
+      <file leaf-file-name="Arrays.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Arrays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="28" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
+            <state line="39" column="13" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnowledgeBaseFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/KnowledgeBaseFactory.java">
+      <file leaf-file-name="Collections.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="22" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
+            <state line="53" column="13" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashSet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="16" selection-start="3168" selection-end="3168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Set.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="114" column="13" selection-start="4692" selection-end="4692" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,52 +125,25 @@
       <file leaf-file-name="StatelessKnowledgeSession.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatelessKnowledgeSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="17" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.0">
+            <state line="107" column="9" selection-start="5220" selection-end="5220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatelessRuleSession.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/rule/StatelessRuleSession.java">
+      <file leaf-file-name="HashMap.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="17" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0">
+            <state line="947" column="18" selection-start="32156" selection-end="32156" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatefulKnowledgeSession.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatefulKnowledgeSession.java">
+      <file leaf-file-name="Collection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="17" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnowledgeBuilder.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/builder/KnowledgeBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="22" selection-start="5156" selection-end="5156" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnowledgePackage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/definition/KnowledgePackage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="17" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Runner.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="14" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
+            <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -318,26 +318,26 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="options.lastSelected" value="com.intellij.openapi.vcs.configurable.VcsManagerConfigurable$4" />
+    <property name="options.lastSelected" value="com.intellij.compiler.options.JavaCompilersTab" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.RunnerTest.testWithRules">
-    <tempConfiguration default="false" name="RunnerTest.testWithRules" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+  <component name="RunManager" selected="JUnit.RunnerTest.testWorkbookLoad">
+    <tempConfiguration default="false" name="RunnerTest.testWorkbookLoad" type="JUnit" factoryName="JUnit" enabled="false" merge="false" sample_coverage="true" runner="emma">
       <pattern>
         <option name="PATTERN" value="stest.*" />
         <option name="ENABLED" value="true" />
       </pattern>
       <module name="spreadsheet-tester" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="stest" />
       <option name="MAIN_CLASS_NAME" value="stest.RunnerTest" />
-      <option name="METHOD_NAME" value="testWithRules" />
+      <option name="METHOD_NAME" value="testWorkbookLoad" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="ADDITIONAL_CLASS_PATH" />
@@ -429,7 +429,7 @@
       <envs />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RunnerTest.testWithRules" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RunnerTest.testWorkbookLoad" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -476,7 +476,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1174" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
@@ -493,7 +493,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2949572" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2949572" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34753662" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
@@ -537,23 +537,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/write/Label.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/KnowledgeBaseFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/Cell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="26" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+        <state line="37" column="32" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -565,58 +551,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/io/Resource.java">
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="232" selection-end="232" vertical-scroll-proportion="0.0">
+        <state line="67" column="7" selection-start="2770" selection-end="2773" vertical-scroll-proportion="-2.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/stest/myrules.drl">
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="14" selection-start="2227" selection-end="2227" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/definition/KnowledgePackage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/builder/KnowledgeBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="22" selection-start="5156" selection-end="5156" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/builder/KnowledgeBuilderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="860" selection-end="860" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/KnowledgeBaseFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="22" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatefulKnowledgeSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="17" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.0">
+        <state line="89" column="17" selection-start="4130" selection-end="4130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -628,9 +572,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatelessKnowledgeSession.java">
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/lang/Iterable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="17" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.0">
+        <state line="15" column="19" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="947" column="18" selection-start="32156" selection-end="32156" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -642,9 +600,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="16" selection-start="3168" selection-end="3168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="13" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="1352" selection-end="1352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Set.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="13" selection-start="4692" selection-end="4692" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="71" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.40756914">
+        <state line="27" column="26" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT-sources.jar!/org/drools/runtime/StatelessKnowledgeSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="9" selection-start="5220" selection-end="5220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="0" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.7098214">
           <folding />
         </state>
       </provider>
