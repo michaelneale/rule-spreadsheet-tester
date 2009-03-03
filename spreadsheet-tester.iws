@@ -59,10 +59,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Runner.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="168" selection-start="5884" selection-end="5884" vertical-scroll-proportion="0.0">
+            <state line="148" column="0" selection-start="6141" selection-end="6141" vertical-scroll-proportion="0.8598131">
               <folding />
             </state>
           </provider>
@@ -77,73 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RichByte.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/runtime/RichByte.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Array.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Array.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="12" selection-start="9626" selection-end="9626" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Workbook.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/Workbook.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="31" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SampleFact.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="6" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunnerTest.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="9" selection-start="452" selection-end="452" vertical-scroll-proportion="-2.3275862">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Seq.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar!/scala/Seq.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="125" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar!/scala/Collection.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="93" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Iterable.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Iterable.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="6" selection-start="3908" selection-end="3908" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -476,7 +413,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1174" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Web Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
       <window_info id="Dataflow to this" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
@@ -493,7 +430,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34157944" sideWeight="0.5" order="2" side_tool="false" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34157944" sideWeight="0.5" order="2" side_tool="false" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3472883" sideWeight="0.5" order="3" side_tool="false" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" />
@@ -579,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/runtime/RichByte.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Array.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="286" column="12" selection-start="9626" selection-end="9626" vertical-scroll-proportion="0.0">
@@ -628,6 +558,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="9" selection-start="452" selection-end="452" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/runtime/RichByte.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="12" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="14" selection-start="2183" selection-end="2183" vertical-scroll-proportion="0.0">
@@ -637,14 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="168" selection-start="5884" selection-end="5884" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/RunnerTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="452" selection-end="452" vertical-scroll-proportion="-2.3275862">
+        <state line="148" column="0" selection-start="6141" selection-end="6141" vertical-scroll-proportion="0.8598131">
           <folding />
         </state>
       </provider>
