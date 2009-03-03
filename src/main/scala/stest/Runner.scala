@@ -51,9 +51,6 @@ class Runner(val knowledgeBase: KnowledgeBase) {
         list.toArray
     }
 
-
-
-
     
     def processScenario(col: Array[Cell], dataCells: Array[Cell], expectCells: Array[Cell], facts: Seq[Array[String]],  globals: Seq[Array[String]], dataStartRow: Int, expectStartRow: Int)  = {
       val factData = createObjects (facts)
@@ -96,16 +93,21 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
     /** Use MVEL to populate the data for a field */
     def populateData(dataCells: Array[Cell], dt: JavaHash[String, Object], scenarioData: Array[Cell], dataStartRow: Int) = {
-      for (c <- dataCells)  MVEL.eval(c.getContents.replace(' ', '.') + " = '" + scenarioData(c.getRow - dataStartRow).getContents + "'", dt)
+      for (c <- dataCells)  {
+        val rawExpr = scenarioData(c.getRow - dataStartRow).getContents
+        MVEL.eval(c.getContents.replace(' ', '.') + " = " + getExpression(rawExpr) , dt)
+      }
       dt
     }
+
+    def getExpression(rawExpr: String) = if (rawExpr.startsWith("(")) rawExpr.substring(1, rawExpr.length-1) else "'" + rawExpr + "'"
 
     /** Use MVEL to inspect the results */
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
         val expression = cell.getContents
         if (expression == "") {
            new PassFail(true, "NA")
-        } else if (MVEL.eval(expression.replace(' ', '.') + " == '" + expected + "'", dt).asInstanceOf[Boolean]) {
+        } else if (MVEL.eval(expression.replace(' ', '.') + " == " + getExpression(expected), dt).asInstanceOf[Boolean]) {
            new PassFail(true, "OK")
         } else {
            new PassFail(false, "Failure in row: " + (cell.getRow + 1) + ". Expected [" + expected + "] but was [" + MVEL.eval(expression.replace(' ', '.'), dt) + "]")
@@ -125,9 +127,6 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
 
 }
-
-
-
 
 case class ScenarioReport(name: String, failures: Array[String], totalTests: Int)
 
