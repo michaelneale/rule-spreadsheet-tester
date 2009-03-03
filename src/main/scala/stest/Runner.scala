@@ -100,7 +100,7 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       dt
     }
 
-    def getExpression(rawExpr: String) = if (rawExpr.startsWith("(")) rawExpr.substring(1, rawExpr.length-1) else "'" + rawExpr + "'"
+    def getExpression(rawExpr: String) = if (rawExpr.startsWith("{") && rawExpr.endsWith("}")) rawExpr.substring(1, rawExpr.length-1) else "'" + rawExpr + "'"
 
     /** Use MVEL to inspect the results */
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
@@ -128,6 +128,20 @@ class Runner(val knowledgeBase: KnowledgeBase) {
 
 }
 
-case class ScenarioReport(name: String, failures: Array[String], totalTests: Int)
+case class ScenarioReport(name: String, failures: Array[String], totalTests: Int) {
+  
+  override def toString = {
+    "\tScenario name: '" + name + "'. Number of tests: " + totalTests + ".\n" + (if (!failures.isEmpty) failures.reduceLeft("\t\t" + _ + "\n\t\t" + _) else "\t\tSUCCESS") 
+  }
+}
 
-case class WorksheetReport(sheetName: String, scenarioReports: Array[ScenarioReport])
+case class WorksheetReport(sheetName: String, scenarioReports: Array[ScenarioReport]) {
+
+
+  override def toString = {
+    "Sheet name: '" + sheetName + "'\n" + scenarioReports.map(_.toString).reduceLeft (_.toString + "\n" + _.toString)
+  }
+
+
+
+}

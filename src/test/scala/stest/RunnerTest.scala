@@ -33,6 +33,7 @@ class RunnerTest extends TestCase {
         assertNotNull(result(0).sheetName)
         assertNotNull(result(0).scenarioReports)
         assertTrue(result(0).scenarioReports.length > 0)
+        println(result(0))
 
       }
 

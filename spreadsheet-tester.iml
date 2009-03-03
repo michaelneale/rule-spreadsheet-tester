@@ -21,8 +21,8 @@
     <orderEntry type="library" exported="" name="Maven: org.scala-lang:scala-library:2.7.2" level="project" />
     <orderEntry type="library" exported="" name="Maven: jexcelapi:jxl:2.4.2" level="project" />
     <orderEntry type="library" exported="" name="Maven: org.drools:drools-compiler:5.0.0.SNAPSHOT" level="project" />
-    <orderEntry type="library" exported="" name="Maven: org.drools:drools-core:5.0.0.20090108.064803-347" level="project" />
-    <orderEntry type="library" exported="" name="Maven: org.mvel:mvel2:2.0.5" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.drools:drools-core:5.0.0.SNAPSHOT" level="project" />
+    <orderEntry type="library" exported="" name="Maven: org.mvel:mvel2:2.0.7-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="Maven: org.drools:drools-api:5.0.0.SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="Maven: joda-time:joda-time:1.5.2" level="project" />
     <orderEntry type="library" exported="" name="Maven: org.antlr:antlr-runtime:3.1.1" level="project" />

@@ -61,7 +61,7 @@
     <option name="DEBUGGING_INFO" value="true" />
     <option name="GENERATE_NO_WARNINGS" value="false" />
     <option name="DEPRECATION" value="true" />
-    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.5" />
     <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
   <component name="JavadocGenerationManager">
@@ -170,28 +170,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.SNAPSHOT/drools-compiler-5.0.0.SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.drools:drools-core:5.0.0.20090108.064803-347">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.mvel:mvel2:2.0.5">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.5/mvel2-2.0.5.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.5/mvel2-2.0.5-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.5/mvel2-2.0.5-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.drools:drools-api:5.0.0.SNAPSHOT">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-api/5.0.0.SNAPSHOT/drools-api-5.0.0.SNAPSHOT.jar!/" />
@@ -247,70 +225,26 @@
         <root url="jar://$MAVEN_REPOSITORY$/janino/janino/2.5.15/janino-2.5.15-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.drools:drools-compiler:5.0.0.MR2">
+    <library name="Maven: org.drools:drools-core:5.0.0.SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR2/drools-compiler-5.0.0.MR2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR2/drools-compiler-5.0.0.MR2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR2/drools-compiler-5.0.0.MR2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.SNAPSHOT/drools-core-5.0.0.SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.drools:drools-core:5.0.0.MR2">
+    <library name="Maven: org.mvel:mvel2:2.0.7-SNAPSHOT">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.MR2/drools-core-5.0.0.MR2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.7-SNAPSHOT/mvel2-2.0.7-SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.MR2/drools-core-5.0.0.MR2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.7-SNAPSHOT/mvel2-2.0.7-SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-core/5.0.0.MR2/drools-core-5.0.0.MR2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.mvel:mvel:2.0M2">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel/2.0M2/mvel-2.0M2.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel/2.0M2/mvel-2.0M2-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel/2.0M2/mvel-2.0M2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.antlr:antlr-runtime:3.0.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.0.1/antlr-runtime-3.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.0.1/antlr-runtime-3.0.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/antlr/antlr-runtime/3.0.1/antlr-runtime-3.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.drools:drools-compiler:5.0.0.MR4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR4/drools-compiler-5.0.0.MR4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR4/drools-compiler-5.0.0.MR4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.MR4/drools-compiler-5.0.0.MR4-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.drools:drools-compiler:5.0.0.M4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.M4/drools-compiler-5.0.0.M4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.M4/drools-compiler-5.0.0.M4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/drools/drools-compiler/5.0.0.M4/drools-compiler-5.0.0.M4-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/mvel/mvel2/2.0.7-SNAPSHOT/mvel2-2.0.7-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
   </component>
