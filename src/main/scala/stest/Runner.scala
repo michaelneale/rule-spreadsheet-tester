@@ -30,11 +30,11 @@ class Runner(val knowledgeBase: KnowledgeBase) {
     * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
     */
     def processSheet(st: Sheet) = {
-        val declarationCells = st getColumn(0) takeWhile(_.getContents != "WHEN") dropWhile(isDoco(_))
+        val declarationCells = st getColumn(0) takeWhile(_.getContents != "WHEN")
         val dataCells = st getColumn (0) dropWhile (_.getContents != "WHEN") drop (1) takeWhile (_.getContents != "EXPECT")
-        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1) takeWhile (!isDoco(_))
-        val facts = declarationCells filter(_.getContents startsWith("Fact")) map(_.getContents.substring(4).split(":"))
-        val globals = declarationCells filter(_.getContents startsWith("Global")) map(_.getContents.substring(6).split(":"))
+        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1) 
+        val facts = declarationCells filter(_.getContents startsWith("Fact")) filter(!_.getContents.startsWith("#")) map(_.getContents.substring(4).split(":"))
+        val globals = declarationCells filter(_.getContents startsWith("Global")) filter(!_.getContents.startsWith("#")) map(_.getContents.substring(6).split(":"))
 
         lazy val dataStartRow = dataCells(0).getRow
         lazy val expectStartRow = expectCells(0).getRow
@@ -75,9 +75,7 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
     }
 
-    def isDoco(c: Cell)  = {
-      c.getContents.startsWith("DOC") || c.getContents.startsWith("NOTE")
-    }
+
 
     /** needed to deal with java hashes that we use later on */
     implicit def toArr[T](set: java.util.Set[T]) = {
