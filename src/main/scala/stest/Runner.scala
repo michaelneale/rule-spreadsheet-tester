@@ -30,9 +30,9 @@ class Runner(val knowledgeBase: KnowledgeBase) {
     * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
     */
     def processSheet(st: Sheet) = {
-        val declarationCells = st getColumn(0) takeWhile(_.getContents != "WHEN") dropWhile(_.getContents.startsWith("DOCUMENTATION"))
+        val declarationCells = st getColumn(0) takeWhile(_.getContents != "WHEN") dropWhile(isDoco(_))
         val dataCells = st getColumn (0) dropWhile (_.getContents != "WHEN") drop (1) takeWhile (_.getContents != "EXPECT")
-        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1) takeWhile (!_.getContents.startsWith("DOCUMENTATION"))
+        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1) takeWhile (!isDoco(_))
         val facts = declarationCells filter(_.getContents startsWith("Fact")) map(_.getContents.substring(4).split(":"))
         val globals = declarationCells filter(_.getContents startsWith("Global")) map(_.getContents.substring(6).split(":"))
 
@@ -75,6 +75,10 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       ScenarioReport(col(dataStartRow - 1).getContents, failures, results.filter(_.failureDescription == "OK").size)
     }
 
+    def isDoco(c: Cell)  = {
+      c.getContents.startsWith("DOC") || c.getContents.startsWith("NOTE")
+    }
+
     /** needed to deal with java hashes that we use later on */
     implicit def toArr[T](set: java.util.Set[T]) = {
       set.toArray(new Array[T](set.size))
@@ -87,8 +91,6 @@ class Runner(val knowledgeBase: KnowledgeBase) {
         session
     }
 
-
-
     /** Avert your eyes children. Ugly mutable code follows */
     def createObjects(ls: Seq[Array[String]]) : JavaHash[String, Object] = {
         val jh = new JavaHash[String, Object]
@@ -100,17 +102,15 @@ class Runner(val knowledgeBase: KnowledgeBase) {
     def populateData(dataCells: Array[Cell], dt: JavaHash[String, Object], scenarioData: Array[Cell], dataStartRow: Int) = {
       for (c <- dataCells)  {
         val rawExpr = scenarioData(c.getRow - dataStartRow).getContents
-        MVEL.eval(c.getContents.replace(' ', '.') + " = " + getExpression(rawExpr) , dt)
+        if (!c.getContents.startsWith("#")) MVEL.eval(c.getContents.replace(' ', '.') + " = " + getExpression(rawExpr) , dt)
       }
       dt
     }
 
-    def getExpression(rawExpr: String) = if (rawExpr.startsWith("{") && rawExpr.endsWith("}")) rawExpr.substring(1, rawExpr.length-1) else "'" + rawExpr + "'"
-
     /** Use MVEL to inspect the results */
     def inspectResult(dt: JavaHash[String, Object], cell: Cell, expected: String)  = {
         val expression = cell.getContents
-        if (expression == "") {
+        if (expression == "" || expression.startsWith("#")) {
            new PassFail(true, "NA")
         } else if (MVEL.eval(expression.replace(' ', '.') + " == " + getExpression(expected), dt).asInstanceOf[Boolean]) {
            new PassFail(true, "OK")
@@ -118,6 +118,9 @@ class Runner(val knowledgeBase: KnowledgeBase) {
            new PassFail(false, "Failure in row: " + (cell.getRow + 1) + ". Expected [" + expected + "] but was [" + MVEL.eval(expression.replace(' ', '.'), dt) + "]")
         }
     }
+
+    def getExpression(rawExpr: String) = if (rawExpr.startsWith("{") && rawExpr.endsWith("}")) rawExpr.substring(1, rawExpr.length-1) else "'" + rawExpr + "'"
+
 
     /** annoyingly putAll is a mutation method in java. NAUGHTY ! */
     def combine[K, Y](lh: JavaHash[K, Y], rh: JavaHash[K, Y]) = {

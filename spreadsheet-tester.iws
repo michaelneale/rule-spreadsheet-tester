@@ -62,7 +62,7 @@
       <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="135" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.22632423">
+            <state line="94" column="8" selection-start="4234" selection-end="4234" vertical-scroll-proportion="0.33226323">
               <folding />
             </state>
           </provider>
@@ -644,7 +644,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="135" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.22632423">
+        <state line="94" column="8" selection-start="4234" selection-end="4234" vertical-scroll-proportion="0.33226323">
           <folding />
         </state>
       </provider>
