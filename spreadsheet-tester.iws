@@ -62,7 +62,61 @@
       <file leaf-file-name="Runner.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="0" selection-start="6141" selection-end="6141" vertical-scroll-proportion="0.8598131">
+            <state line="36" column="135" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.22632423">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/List.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="444" column="40" selection-start="14104" selection-end="14104" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Seq.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar!/scala/Seq.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="List.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="39" selection-start="4152" selection-end="4152" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Collection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Array.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="286" column="46" selection-start="9660" selection-end="9660" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myrules.drl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/stest/myrules.drl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="60" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +134,16 @@
       <file leaf-file-name="SampleFact.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+            <state line="10" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predef.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="59" selection-start="1382" selection-end="1382" vertical-scroll-proportion="-6.3846154">
               <folding />
             </state>
           </provider>
@@ -260,21 +323,21 @@
     <property name="RunManagerConfig.showSettingsBeforeRunnig" value="true" />
   </component>
   <component name="RunManager" selected="JUnit.RunnerTest">
-    <tempConfiguration default="false" name="RunnerTest" type="JUnit" factoryName="JUnit" enabled="false" merge="false" runner="emma">
+    <tempConfiguration default="false" name="RunnerTest" type="JUnit" factoryName="JUnit" enabled="false" merge="false" sample_coverage="true" runner="emma">
       <pattern>
         <option name="PATTERN" value="stest.*" />
         <option name="ENABLED" value="true" />
       </pattern>
       <module name="spreadsheet-tester" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="stest" />
       <option name="MAIN_CLASS_NAME" value="stest.RunnerTest" />
-      <option name="METHOD_NAME" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="ADDITIONAL_CLASS_PATH" />
@@ -474,34 +537,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="900" column="34" selection-start="30325" selection-end="30325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/AbstractMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="344" column="24" selection-start="12746" selection-end="12746" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/Sheet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/stest/myrules.drl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="61" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/read/biff/WorkbookParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="23" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
@@ -509,37 +544,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="60" selection-start="7139" selection-end="7139" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Array.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="12" selection-start="9626" selection-end="9626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/jexcelapi/jxl/2.4.2/jxl-2.4.2.jar!/jxl/Workbook.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="31" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar!/scala/Seq.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="125" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -579,9 +586,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/stest/myrules.drl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="60" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Predef.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="59" selection-start="1382" selection-end="1382" vertical-scroll-proportion="-6.3846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/Array.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="286" column="46" selection-start="9660" selection-end="9660" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="17" selection-start="4893" selection-end="4893" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/1.5.0/Home/src.jar!/src/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="39" selection-start="4152" selection-end="4152" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.7.2/scala-library-2.7.2.jar!/scala/Seq.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="6" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../apps/scala-2.7.2.final/src/scala-library-src.jar!/scala/List.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="444" column="40" selection-start="14104" selection-end="14104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/stest/SampleFact.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/stest/Runner.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="0" selection-start="6141" selection-end="6141" vertical-scroll-proportion="0.8598131">
+        <state line="36" column="135" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.22632423">
           <folding />
         </state>
       </provider>

@@ -12,9 +12,14 @@ import org.drools.KnowledgeBase
 import org.mvel2.MVEL
 
 
-
+/**
+ *  Create a new runner which will run tests over the given knowledgeBase.
+ */
 class Runner(val knowledgeBase: KnowledgeBase) {
 
+  /**
+   *  This will run all the tests in a XLS workbook.
+   */
     def runTestsInWorkbook(input: InputStream) : Array[WorksheetReport] = {
       val w = Workbook.getWorkbook (input)
       w.getSheets.map ((s: Sheet) => WorksheetReport(s.getName, processSheet(s)))
@@ -25,9 +30,9 @@ class Runner(val knowledgeBase: KnowledgeBase) {
     * Process a sheet, return a List of ScenarioReports - one for each scenario column found.
     */
     def processSheet(st: Sheet) = {
-        val declarationCells = st.getColumn(0).takeWhile(_.getContents != "WHEN")
+        val declarationCells = st getColumn(0) takeWhile(_.getContents != "WHEN") dropWhile(_.getContents.startsWith("DOCUMENTATION"))
         val dataCells = st getColumn (0) dropWhile (_.getContents != "WHEN") drop (1) takeWhile (_.getContents != "EXPECT")
-        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1)
+        val expectCells = st getColumn(0) dropWhile(_.getContents != "EXPECT") drop(1) takeWhile (!_.getContents.startsWith("DOCUMENTATION"))
         val facts = declarationCells filter(_.getContents startsWith("Fact")) map(_.getContents.substring(4).split(":"))
         val globals = declarationCells filter(_.getContents startsWith("Global")) map(_.getContents.substring(6).split(":"))
 
@@ -123,26 +128,15 @@ class Runner(val knowledgeBase: KnowledgeBase) {
     }
 
     case class PassFail(pass: Boolean, failureDescription: String)
-
-
-
 }
 
 case class ScenarioReport(name: String, failures: Array[String], totalTests: Int) {
-  
   override def toString = {
-    "\tScenario name: '" + name + "'. Number of tests: " + totalTests + ".\n" + (if (!failures.isEmpty) failures.reduceLeft("\t\t" + _ + "\n\t\t" + _) else "\t\tSUCCESS") 
+    "\tScenario name: '" + name + "'. Number of tests: " + totalTests + ".\n" + (if (!failures.isEmpty) failures.reduceLeft("\t\t" + _ + "\n\t\t" + _) else "\t\tSUCCESS")
   }
 }
 
 case class WorksheetReport(sheetName: String, scenarioReports: Array[ScenarioReport]) {
-
-
-  override def toString = {
-    "Sheet name: '" + sheetName + "'\n" + scenarioReports.map(_.toString).reduceLeft (_.toString + "\n" + _.toString)
-  }
-
-
-
+  override def toString = "Sheet name: '" + sheetName + "'\n" + scenarioReports.map(_.toString).reduceLeft (_.toString + "\n" + _.toString)
 }
 
