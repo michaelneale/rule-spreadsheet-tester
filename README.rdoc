@@ -6,6 +6,8 @@ This tool allows drools knowledge bases to be tested via an Excel (tm) spreadshe
 == Usage
 Each columns is a scenario... the best thing is to look at the sample that is included in the download (unzip the jar to find it) - it is fully annotated and documented. You can find that in the release directory.
 
+On your classpath you will need the jar for the project, as well as the scala-library.jar (as it uses scala), as well as the drools dependencies.
+
 === Usage Examples
  //create a new Runner
  runner = new Runner(droolsKnowledgeBase);
