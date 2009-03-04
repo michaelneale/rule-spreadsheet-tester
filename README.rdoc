@@ -8,8 +8,8 @@ Each columns is a scenario... the best thing is to look at the sample that is in
 
 === Usage Examples
  //create a new Runner
-runner = new Runner(droolsKnowledgeBase);
-WorksheetReport[] result = runner.runTestsInWorkbook(inputStreamToXLS);
+ runner = new Runner(droolsKnowledgeBase);
+ WorksheetReport[] result = runner.runTestsInWorkbook(inputStreamToXLS);
 
-//you can then print out each result for pass/fail, or interrogate it to find out what wen't wrong.
+ //you can then print out each result for pass/fail, or interrogate it to find out what wen't wrong.
 
