@@ -66,7 +66,7 @@ class Runner(val knowledgeBase: KnowledgeBase) {
       val factStore = populateData(dataCells, combine (factData, globalData), scenarioData, dataStartRow)
 
       //here we fire things up in rules
-      createSession(globalData, knowledgeBase).executeIterable(factData.values)
+      createSession(globalData, knowledgeBase).execute(factData.values)
 
       //perform checks
       val expectationData = col dropWhile (_.getRow < expectStartRow)
